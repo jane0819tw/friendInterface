@@ -1,0 +1,281 @@
+*{
+/*   border: 1px solid #000; */
+}
+html,
+body {
+  height: 100%;
+  background-color: #003559 !important;
+}
+#list-mode li{
+  font-size: 1.5em;
+  background-color: rgba(255,255,255,0.85);
+  border-radius: 10px;
+  overflow: hidden;
+  
+}
+#list-mode li img{
+  width: 150px;
+}
+
+.navbar {
+  background-color: #FFF2D6;
+}
+#modalBody{
+  position: relative;
+}
+.close{
+  position: absolute;
+  right: 1em;
+  top: .05em;
+  z-index: 2;
+  
+}
+
+.jumbotron {
+  height: 100vh;
+  background-color: #DD1C1A !important;
+  color: #FFF2D6;
+  font-weight: 900;
+  display: flex;
+}
+
+#main_container {
+  background-color: #003559;
+}
+
+#main_container #results,
+#main_container #favorite_results {
+  overflow: hidden;
+}
+
+#main_container #results .userBox,
+#main_container #favorite_results .userBox {
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+#main_container #results .userBox img,
+#main_container #favorite_results .userBox img {
+  width: 100%;
+}
+
+#main_container #results .userBox .cover,
+#main_container #favorite_results .userBox .cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+}
+
+#main_container #results .userBox .darken,
+#main_container #favorite_results .userBox .darken {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#main_container #results .userBox .darken:hover,
+#main_container #favorite_results .userBox .darken:hover {
+  opacity: 1;
+}
+
+#main_container #results .userBox .like,
+#main_container #favorite_results .userBox .like {
+  font-size: 30px;
+  z-index: 2;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.show {
+  color: #f24;
+}
+
+.delete {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 40px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-animation: rotate 2s infinite linear;
+          animation: rotate 2s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+footer {
+  background-color: #DD1C1A;
+  color: #FFF2D6;
+}
+
+footer a {
+  text-decoration: none;
+  color: #FFF2D6;
+  font-weight: 900;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: #FFF2D6;
+  font-weight: 900;
+  font-size: 0.9em;
+}
+
+.modal .modal-dialog {
+  top: 50%;
+  -webkit-transform: translateY(-50%) !important;
+          transform: translateY(-50%) !important;
+}
+
+.modal .modal-dialog .modal-content {
+  overflow: hidden;
+}
+
+.modal .modal-dialog .modal-content #modalBody #profile {
+  position: relative;
+  padding: 1em;
+  background-color: #003559;
+
+  overflow: hidden;
+}
+
+.modal .modal-dialog .modal-content #modalBody #profile .imgBox {
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+.modal .modal-dialog .modal-content #modalBody #profile .imgBox #avatarModal {
+  width: 100%;
+  z-index: 1;
+}
+
+.modal .modal-dialog .modal-content #modalBody #profile #bgModal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  background-color: #F0C808;
+}
+
+.modal .modal-dialog .modal-content #modalBody #profile .info {
+  font-size: 20px;
+}
+
+.modal .modal-dialog .modal-content #modalBody #profile .info i {
+  line-height: 1.5em;
+}
+/* 加上放大的特效 */
+@keyframes bigger {
+    0%{
+      transform: scale(1)
+    }
+    50%{
+      transform: scale(1.5)
+    }
+    100%{
+      transform: scale(1)
+    }
+  }
+.showLike{
+  color: #f24 !important;
+  animation: bigger 1s 1;
+  
+}
+
+input[type="radio"] {
+  line-height: 1.5em;
+}
+
+#selectPanel {
+  background-color: rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+}
+
+#selectPanel label{
+ font-size: 1.2em;
+}
+
+#selectPanel input[type="number"],
+#selectPanel  input[type="text"] {
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  color: #FFF2D6;
+  font-weight: 900;
+}
+
+#selectPanel option {
+  color: #000;
+}
+
+@media (max-width: 576px) {
+  #modalBody {
+    padding: 0;
+  }
+  .modal-content {
+    max-height: 90vh;
+  }
+  .modal-content .imgBox {
+    width: 50%;
+  }
+}
+
+#flagModal{
+  width: 30px;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 768px) {
+  #selectPanel {
+    min-width: 500px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
