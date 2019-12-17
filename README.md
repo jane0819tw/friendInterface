@@ -1,4 +1,6 @@
 # friendInterface
+[website link](https://jane0819tw.github.io/friendInterface/)
+
 use an api to practice javascript.
 ## skills features
 cdn: bootstrap, font awesome
